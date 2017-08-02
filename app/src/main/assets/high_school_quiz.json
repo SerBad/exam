@@ -1,0 +1,1102 @@
+[
+  {
+    "answer": 0,
+    "question": "temper",
+    "id": 0,
+    "options": [
+      "脾气",
+      "道德",
+      "残疾的",
+      "缺点"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "pray",
+    "id": 1,
+    "options": [
+      "祈祷",
+      "单独的，孤独的",
+      "有天赋的",
+      "窒息"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "unrest",
+    "id": 2,
+    "options": [
+      "手术",
+      "产量",
+      "不安；骚动",
+      "从前的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "final",
+    "id": 3,
+    "options": [
+      "搬运者；(车的)置物架",
+      "最终的",
+      "信封",
+      "私语；低语"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "horrible",
+    "id": 4,
+    "options": [
+      "加强；巩固",
+      "可怕的",
+      "文明",
+      "好奇的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "eventually",
+    "id": 5,
+    "options": [
+      "工资",
+      "最终地",
+      "便条",
+      "谋杀"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "doll",
+    "id": 6,
+    "options": [
+      "沸腾，烧开；煮",
+      "讽刺的",
+      "排队",
+      "玩偶"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "instruct",
+    "id": 7,
+    "options": [
+      "指导",
+      "周期",
+      "一年一次的，每年的",
+      "答谢；承认"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "likely",
+    "id": 8,
+    "options": [
+      "很可能的",
+      "部分",
+      "数字",
+      "堆积，积累"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "dive",
+    "id": 9,
+    "options": [
+      "预测",
+      "忠告，劝告，建议",
+      "葡萄酒",
+      "跳水"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "reward",
+    "id": 10,
+    "options": [
+      "文书工作",
+      "疼痛",
+      "报偿",
+      "奖金，红利"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "drift",
+    "id": 11,
+    "options": [
+      "漂流",
+      "照相簿，集邮本，签名纪念册",
+      "决定",
+      "堆"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "dive",
+    "id": 12,
+    "options": [
+      "备件",
+      "大学",
+      "跳水",
+      "商标，牌子"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "Oceania",
+    "id": 13,
+    "options": [
+      "直接的",
+      "司法长官",
+      "更新；使现代化",
+      "大洋洲"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "whale",
+    "id": 14,
+    "options": [
+      "旅行",
+      "福利；幸福；安宁",
+      "鲸",
+      "很可能的"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "rapidly",
+    "id": 15,
+    "options": [
+      "迅速地",
+      "津贴，补贴",
+      "回答",
+      "田地；田野"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "canteen",
+    "id": 16,
+    "options": [
+      "跳过；跳读",
+      "想知道；惊讶",
+      "分类",
+      "餐厅，食堂"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "bury",
+    "id": 17,
+    "options": [
+      "印刷",
+      "发生",
+      "埋，葬",
+      "地位；身份，"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "heat",
+    "id": 18,
+    "options": [
+      "热",
+      "安家，定居",
+      "顺序，命令",
+      "地点"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "agriculture",
+    "id": 19,
+    "options": [
+      "水平",
+      "满意的",
+      "农业，农学",
+      "烦恼，担忧"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "poor",
+    "id": 20,
+    "options": [
+      "贫穷的",
+      "获得，达到",
+      "无法忍受的",
+      "渴望，期望"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "despair",
+    "id": 21,
+    "options": [
+      "发明",
+      "热心的",
+      "堆积，积累",
+      "绝望"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "chart",
+    "id": 22,
+    "options": [
+      "薄的纱织品；薄纱",
+      "老的",
+      "幸运的",
+      "图表"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "unique",
+    "id": 23,
+    "options": [
+      "雕刻家",
+      "出版",
+      "谈话",
+      "独特的，唯一的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "assume",
+    "id": 24,
+    "options": [
+      "唤醒",
+      "假定，设想",
+      "分享，分担",
+      "信心"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "talent",
+    "id": 25,
+    "options": [
+      "沙子",
+      "犯罪",
+      "才能；天才",
+      "忙碌的"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "language",
+    "id": 26,
+    "options": [
+      "阳光",
+      "用户,使用者",
+      "信封",
+      "语言"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "dynamic",
+    "id": 27,
+    "options": [
+      "有活力的",
+      "联邦的",
+      "迅速地",
+      "有空的；可得到的，可用的"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "tissue",
+    "id": 28,
+    "options": [
+      "宏伟的",
+      "自由",
+      "薄的纱织品；薄纱",
+      "航行；旅行"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "wet",
+    "id": 29,
+    "options": [
+      "赞美",
+      "湿的",
+      "成功的",
+      "滚动"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "plain",
+    "id": 30,
+    "options": [
+      "电路",
+      "平常的",
+      "灵魂；心灵",
+      "单词；言语"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "fundamental",
+    "id": 31,
+    "options": [
+      "显然",
+      "证明",
+      "祝愿；",
+      "基本的"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "explicit",
+    "id": 32,
+    "options": [
+      "忧虑，焦急",
+      "衣服",
+      "入口",
+      "清楚的；直率的"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "pole",
+    "id": 33,
+    "options": [
+      "极点",
+      "考虑",
+      "平的",
+      "链条"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "bank",
+    "id": 34,
+    "options": [
+      "越过",
+      "改正",
+      "银行",
+      "背景"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "grower",
+    "id": 35,
+    "options": [
+      "森林",
+      "prep.在旁边，沿着",
+      "知道的，意识到的",
+      "种植者"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "employer",
+    "id": 36,
+    "options": [
+      "极度的；极大的",
+      "靴子",
+      "打仗(架)，争论",
+      "雇主"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "observe",
+    "id": 37,
+    "options": [
+      "突然地",
+      "甚至",
+      "观察",
+      "理发师"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "definitely",
+    "id": 38,
+    "options": [
+      "肯定地",
+      "兰开斯特",
+      "滚动",
+      "出现；看来，似乎"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "pole",
+    "id": 39,
+    "options": [
+      "极点",
+      "截止期限",
+      "气球",
+      "钟表的滴答声"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "ban",
+    "id": 40,
+    "options": [
+      "胡椒粉",
+      "禁止，取缔",
+      "汽油",
+      "分类"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "greengrocer",
+    "id": 41,
+    "options": [
+      "当局",
+      "港口",
+      "蔬菜水果商",
+      "滑动"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "unbearable",
+    "id": 42,
+    "options": [
+      "无法忍受的",
+      "暴露",
+      "四轮马车；(火车)客车厢",
+      "候选人"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "tend",
+    "id": 43,
+    "options": [
+      "囚犯",
+      "酒精，酒",
+      "层",
+      "照管，护理"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "shore",
+    "id": 44,
+    "options": [
+      "询问",
+      "漂亮的",
+      "海岸",
+      "侦察"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "obvious",
+    "id": 45,
+    "options": [
+      "理发",
+      "明显的",
+      "周围的",
+      "控告，谴责"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "pure",
+    "id": 46,
+    "options": [
+      "试图，寻找",
+      "赞助者；主办者",
+      "纯的",
+      "幕"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "confidence",
+    "id": 47,
+    "options": [
+      "课程",
+      "使成熟",
+      "探测器",
+      "信心"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "mattress",
+    "id": 48,
+    "options": [
+      "化学的",
+      "压力",
+      "保持，停止",
+      "床垫"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "downstairs",
+    "id": 49,
+    "options": [
+      "幸存；生还",
+      "在楼下，到楼下",
+      "熏肉",
+      "…的"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "spread",
+    "id": 50,
+    "options": [
+      "女儿",
+      "铁路",
+      "不公平的，不公正的",
+      "传播；伸展"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "pardon",
+    "id": 51,
+    "options": [
+      "原谅",
+      "(总称)服装",
+      "文化",
+      "有活力的"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "dawn",
+    "id": 52,
+    "options": [
+      "图表",
+      "警报",
+      "黎明",
+      "快艇"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "crossroads",
+    "id": 53,
+    "options": [
+      "包围",
+      "交叉路口",
+      "实际上",
+      "鼓掌"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "bewilder",
+    "id": 54,
+    "options": [
+      "昆虫",
+      "黄昏",
+      "发射",
+      "困惑"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "apply",
+    "id": 55,
+    "options": [
+      "申请；应用",
+      "采用；收养",
+      "进入",
+      "隐藏"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "horsepower",
+    "id": 56,
+    "options": [
+      "活动",
+      "赞美",
+      "有天赋的",
+      "马力"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "cocoa",
+    "id": 57,
+    "options": [
+      "可可粉",
+      "飓风",
+      "允许，准许",
+      "巨大的"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "exercise",
+    "id": 58,
+    "options": [
+      "保卫",
+      "想像",
+      "练习",
+      "液态的"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "horsepower",
+    "id": 59,
+    "options": [
+      "马力",
+      "不管怎样",
+      "聚焦，集中",
+      "插入"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "cage",
+    "id": 60,
+    "options": [
+      "笼子",
+      "准备",
+      "炸药",
+      "邪恶的"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "dream",
+    "id": 61,
+    "options": [
+      "祝愿；",
+      "保佑，降福",
+      "做梦；梦想",
+      "使确信"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "organise",
+    "id": 62,
+    "options": [
+      "prep.在旁边，沿着",
+      "提供",
+      "组织",
+      "包含；内装"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "way",
+    "id": 63,
+    "options": [
+      "分类",
+      "想像",
+      "周期",
+      "方法；道路"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "grocer",
+    "id": 64,
+    "options": [
+      "当地的",
+      "事件",
+      "引导",
+      "零售商人"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "basic",
+    "id": 65,
+    "options": [
+      "注意，关心",
+      "发明",
+      "在高处",
+      "基本的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "tower",
+    "id": 66,
+    "options": [
+      "理发",
+      "塔",
+      "王朝",
+      "使惊讶"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "attain",
+    "id": 67,
+    "options": [
+      "踏板",
+      "获得，达到",
+      "轻蔑地",
+      "除非，如果不"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "adequate",
+    "id": 68,
+    "options": [
+      "建议",
+      "足够的，适当的",
+      "回(原处)，向后",
+      "离婚"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "cure",
+    "id": 69,
+    "options": [
+      "治疗",
+      "外科医生",
+      "台风",
+      "鸭子"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "theory",
+    "id": 70,
+    "options": [
+      "冷淡地",
+      "理论",
+      "自豪，骄傲",
+      "(经讨价还价之后)廉价货"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "nation",
+    "id": 71,
+    "options": [
+      "民族",
+      "慷慨的",
+      "活泼的",
+      "疾病"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "minister",
+    "id": 72,
+    "options": [
+      "大蒜",
+      "部长",
+      "自然",
+      "空的；空白的"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "avenge",
+    "id": 73,
+    "options": [
+      "报仇",
+      "满的",
+      "手",
+      "尸体；残骸"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "bite",
+    "id": 74,
+    "options": [
+      "咬，叮",
+      "发音",
+      "必需的",
+      "电线"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "tent",
+    "id": 75,
+    "options": [
+      "生气地",
+      "同情",
+      "帐篷",
+      "适当的"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "apparent",
+    "id": 76,
+    "options": [
+      "拖延",
+      "利用，应用",
+      "明显的，清楚的",
+      "偶尔地"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "superior",
+    "id": 77,
+    "options": [
+      "单一的；单个的",
+      "上级，长者",
+      "永远",
+      "(未指明真实名称的)某…；确定的"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "talk",
+    "id": 78,
+    "options": [
+      "不停地",
+      "统治",
+      "出版",
+      "谈话,讨论"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "stone",
+    "id": 79,
+    "options": [
+      "购买",
+      "石子",
+      "矿物质",
+      "为…做广告"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "friction",
+    "id": 80,
+    "options": [
+      "摩擦",
+      "附近",
+      "香甜地",
+      "心理学"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "pass",
+    "id": 81,
+    "options": [
+      "传递，经过",
+      "空的；茫然的",
+      "越过",
+      "分离，分别地"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "microwave",
+    "id": 82,
+    "options": [
+      "出价，投标",
+      "停放(汽车)",
+      "微波",
+      "毕业"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "furnished",
+    "id": 83,
+    "options": [
+      "全体职员",
+      "游荡，漫步",
+      "配有家具的",
+      "不适宜的；不相宜的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "too",
+    "id": 84,
+    "options": [
+      "没有受伤的",
+      "也；又；太",
+      "拉开/拉上拉链",
+      "圆圈"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "surround",
+    "id": 85,
+    "options": [
+      "围绕；包围",
+      "个人的",
+      "圣诞节",
+      "培养；训练"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "offence",
+    "id": 86,
+    "options": [
+      "大陆",
+      "犯罪",
+      "方法；道路",
+      "姓名地址录"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "determined",
+    "id": 87,
+    "options": [
+      "水球",
+      "意识",
+      "坚定的",
+      "工资"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "chest",
+    "id": 88,
+    "options": [
+      "箱子",
+      "要求",
+      "有罪的",
+      "惊慌"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "wise",
+    "id": 89,
+    "options": [
+      "具体的",
+      "不久",
+      "明智的；聪明的",
+      "一个面包"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "component",
+    "id": 90,
+    "options": [
+      "不适宜的；不相宜的",
+      "一年一次的，每年的",
+      "真实的",
+      "成分"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "safety",
+    "id": 91,
+    "options": [
+      "联盟，联合",
+      "梗",
+      "安全地带",
+      "唱"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "herb",
+    "id": 92,
+    "options": [
+      "爆炸",
+      "草药",
+      "巨大的",
+      "谁的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "jam",
+    "id": 93,
+    "options": [
+      "吼叫",
+      "堵塞",
+      "需要,想要",
+      "叫；电话"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "electronic",
+    "id": 94,
+    "options": [
+      "(使)分开，(使)分离",
+      "技能，技巧",
+      "电子的",
+      "看见"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "merchant",
+    "id": 95,
+    "options": [
+      "在…上面",
+      "兰开斯特",
+      "商人",
+      "开始，着手"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "opponent",
+    "id": 96,
+    "options": [
+      "极好的；华丽的；宏伟的",
+      "培养；训练",
+      "竞赛",
+      "反对者"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "send",
+    "id": 97,
+    "options": [
+      "中小学校长",
+      "扩大",
+      "错误的",
+      "打发，派遣"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "countryside",
+    "id": 98,
+    "options": [
+      "除非，如果不",
+      "敬意",
+      "因为",
+      "农村"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "interval",
+    "id": 99,
+    "options": [
+      "车间",
+      "真实的；正确的",
+      "间隔",
+      "系，拴，扎"
+    ]
+  }
+]

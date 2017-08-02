@@ -1,0 +1,1102 @@
+[
+  {
+    "answer": 2,
+    "question": "extinct",
+    "id": 0,
+    "options": [
+      "基本的",
+      "逗留",
+      "灭绝的",
+      "翡翠"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "clarify",
+    "id": 1,
+    "options": [
+      "跳板",
+      "线圈",
+      "按摩",
+      "澄清"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "flexible",
+    "id": 2,
+    "options": [
+      "慈善",
+      "灵活的",
+      "连续的",
+      "处理；配置"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "slander",
+    "id": 3,
+    "options": [
+      "听觉的",
+      "宣告无效",
+      "类比",
+      "口头诽谤"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "charter",
+    "id": 4,
+    "options": [
+      "怀疑的",
+      "宣布放弃",
+      "抵抗",
+      "宪章"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "sermon",
+    "id": 5,
+    "options": [
+      "津贴",
+      "登陆/上岸",
+      "投票表决",
+      "布道"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "oxidize",
+    "id": 6,
+    "options": [
+      "诊断",
+      "氧化",
+      "微光",
+      "程度"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "hostile",
+    "id": 7,
+    "options": [
+      "敌意的",
+      "提供饮食",
+      "可溶的",
+      "挑战"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "surrender",
+    "id": 8,
+    "options": [
+      "担保",
+      "投降",
+      "宣称",
+      "转变"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "infinite",
+    "id": 9,
+    "options": [
+      "千禧年",
+      "评论",
+      "无限的",
+      "议论"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "appeal",
+    "id": 10,
+    "options": [
+      "主要的",
+      "迷信",
+      "呼吁；上诉",
+      "偏见"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "notorious",
+    "id": 11,
+    "options": [
+      "臭名昭著的",
+      "轻率地",
+      "剥光",
+      "错觉"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "annul",
+    "id": 12,
+    "options": [
+      "博爱",
+      "吸气",
+      "宣告无效",
+      "修辞"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "vibrate",
+    "id": 13,
+    "options": [
+      "软膏",
+      "五角形",
+      "贡献",
+      "振动"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "underestimate",
+    "id": 14,
+    "options": [
+      "责备",
+      "烈士",
+      "互惠的",
+      "低估"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "bleat",
+    "id": 15,
+    "options": [
+      "富裕的",
+      "陆军或海军学校学员",
+      "使得",
+      "(羊, 小牛)叫"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "amenable",
+    "id": 16,
+    "options": [
+      "勤奋的",
+      "潮湿的",
+      "顺从的",
+      "随之而来的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "revolve",
+    "id": 17,
+    "options": [
+      "延长",
+      "旋转",
+      "参议院",
+      "谋生之道"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "implement",
+    "id": 18,
+    "options": [
+      "执行",
+      "放大",
+      "商议",
+      "亡故的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "fabulous",
+    "id": 19,
+    "options": [
+      "责任的",
+      "寓言的",
+      "简化",
+      "思想的"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "impose",
+    "id": 20,
+    "options": [
+      "盛行",
+      "滑稽可笑的",
+      "霜状白糖",
+      "强加"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "applaud",
+    "id": 21,
+    "options": [
+      "同意",
+      "盛行",
+      "故意的",
+      "鼓掌"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "neutral",
+    "id": 22,
+    "options": [
+      "中立的",
+      "夹紧",
+      "象征",
+      "开始"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "junk",
+    "id": 23,
+    "options": [
+      "周年纪念",
+      "请愿",
+      "废旧物品",
+      "统治"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "scratch",
+    "id": 24,
+    "options": [
+      "声明",
+      "自觉的",
+      "抓，搔",
+      "缺点"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "symmetry",
+    "id": 25,
+    "options": [
+      "允许",
+      "人造的",
+      "对称",
+      "审计"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "cosmopolitan",
+    "id": 26,
+    "options": [
+      "世界性的",
+      "仇恨",
+      "抢夺",
+      "蜷缩"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "testify",
+    "id": 27,
+    "options": [
+      "证实",
+      "宣称",
+      "土著居民",
+      "影响"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "candidate",
+    "id": 28,
+    "options": [
+      "一群",
+      "自发",
+      "候选人",
+      "破旧的"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "axis",
+    "id": 29,
+    "options": [
+      "轴",
+      "呈现；介绍",
+      "拉",
+      "擦伤"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "ozone",
+    "id": 30,
+    "options": [
+      "臭氧",
+      "立法",
+      "旋转",
+      "奖章"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "sermon",
+    "id": 31,
+    "options": [
+      "指令",
+      "过分挑剔的",
+      "布道",
+      "最重要的"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "carnival",
+    "id": 32,
+    "options": [
+      "赋予权利",
+      "原则",
+      "倡议",
+      "狂欢节"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "cuff",
+    "id": 33,
+    "options": [
+      "袖口",
+      "上船或飞机；从事",
+      "末端",
+      "设置"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "annals",
+    "id": 34,
+    "options": [
+      "呼吁；上诉",
+      "指责；控告",
+      "编年史",
+      "强壮的"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "meadow",
+    "id": 35,
+    "options": [
+      "草地；牧场",
+      "包围",
+      "垂直的",
+      "使人世故"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "arouse",
+    "id": 36,
+    "options": [
+      "唤起",
+      "祭坛",
+      "水族馆",
+      "剥夺"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "access",
+    "id": 37,
+    "options": [
+      "实施",
+      "超越",
+      "入口；接近",
+      "障碍"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "tapestry",
+    "id": 38,
+    "options": [
+      "旋转",
+      "气旋",
+      "挂毯；织锦",
+      "结合"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "fraud",
+    "id": 39,
+    "options": [
+      "欺诈",
+      "忙碌",
+      "重新开始",
+      "走失"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "bulldozer",
+    "id": 40,
+    "options": [
+      "假定",
+      "废除",
+      "处理；配置",
+      "推土机"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "aisle",
+    "id": 41,
+    "options": [
+      "制裁",
+      "论坛",
+      "过道",
+      "扮鬼相"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "underestimate",
+    "id": 42,
+    "options": [
+      "优点",
+      "赋予权利",
+      "精神错乱的",
+      "低估"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "lunatic",
+    "id": 43,
+    "options": [
+      "经历",
+      "大使随员",
+      "精神错乱的",
+      "有毒的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "tactic",
+    "id": 44,
+    "options": [
+      "宽敞的",
+      "策略",
+      "谋生之道",
+      "有助于"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "differential",
+    "id": 45,
+    "options": [
+      "不同的",
+      "取消",
+      "丑闻",
+      "枫树"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "panic",
+    "id": 46,
+    "options": [
+      "恐慌",
+      "学院的",
+      "围攻",
+      "使成为整体"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "autonomous",
+    "id": 47,
+    "options": [
+      "自治的",
+      "壮观的",
+      "有争议的",
+      "摩擦"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "gnaw",
+    "id": 48,
+    "options": [
+      "浏览",
+      "勇敢的",
+      "咬, 啃",
+      "流行性感冒"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "optimistic",
+    "id": 49,
+    "options": [
+      "攻击性的",
+      "乐观的",
+      "碰撞",
+      "粘上"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "release",
+    "id": 50,
+    "options": [
+      "象牙",
+      "弹性的",
+      "鹰",
+      "释放"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "facsimile",
+    "id": 51,
+    "options": [
+      "传真",
+      "勤奋的",
+      "交谈",
+      "能力"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "chorus",
+    "id": 52,
+    "options": [
+      "劝告",
+      "谦卑的",
+      "凸面的",
+      "(歌曲的)副歌"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "boycott",
+    "id": 53,
+    "options": [
+      "提升",
+      "削弱",
+      "举起",
+      "抵制"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "cellar",
+    "id": 54,
+    "options": [
+      "跨",
+      "附上",
+      "交换",
+      "地窖"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "rack",
+    "id": 55,
+    "options": [
+      "足够的",
+      "措词",
+      "行李架",
+      "缺点"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "conducive",
+    "id": 56,
+    "options": [
+      "投递",
+      "有助于",
+      "趣闻轶事",
+      "锤子"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "disposal",
+    "id": 57,
+    "options": [
+      "温和的",
+      "清除",
+      "核查",
+      "按摩"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "jurisdiction",
+    "id": 58,
+    "options": [
+      "司法权",
+      "哀叹",
+      "同时发生；一致",
+      "赎金"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "cellular",
+    "id": 59,
+    "options": [
+      "使习惯",
+      "宣称",
+      "细胞的",
+      "生理学"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "prowess",
+    "id": 60,
+    "options": [
+      "英勇",
+      "身份",
+      "传染",
+      "控告"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "dispatch",
+    "id": 61,
+    "options": [
+      "学院的",
+      "派遣",
+      "感情外露",
+      "凹槽"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "tangible",
+    "id": 62,
+    "options": [
+      "有形的",
+      "保留",
+      "浆糊",
+      "古罗马军团"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "confront",
+    "id": 63,
+    "options": [
+      "使窒息",
+      "钟摆",
+      "指示",
+      "面临"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "accessory",
+    "id": 64,
+    "options": [
+      "附件",
+      "(使)缠结",
+      "财政；金融",
+      "狂怒的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "chart",
+    "id": 65,
+    "options": [
+      "成直角的",
+      "图表",
+      "造船厂",
+      "亲密的"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "fabulous",
+    "id": 66,
+    "options": [
+      "熟练的",
+      "横梁",
+      "寓言的",
+      "肠"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "intricate",
+    "id": 67,
+    "options": [
+      "使免疫",
+      "冲击",
+      "错综复杂的",
+      "调查"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "punctual",
+    "id": 68,
+    "options": [
+      "检查站",
+      "准时的",
+      "凝视",
+      "学院的"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "collegiate",
+    "id": 69,
+    "options": [
+      "学院的",
+      "骚动的",
+      "医务室",
+      "拍卖"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "pilgrim",
+    "id": 70,
+    "options": [
+      "朝圣者",
+      "遵照",
+      "林阴道",
+      "振动"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "abandon",
+    "id": 71,
+    "options": [
+      "卖国贼",
+      "抛弃",
+      "畜生",
+      "陈列"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "narcotic",
+    "id": 72,
+    "options": [
+      "广东人",
+      "本质",
+      "完成",
+      "麻醉的"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "swindle",
+    "id": 73,
+    "options": [
+      "欺诈",
+      "外星人",
+      "民兵",
+      "压缩"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "facility",
+    "id": 74,
+    "options": [
+      "运用",
+      "设备",
+      "强加",
+      "使不安"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "stern",
+    "id": 75,
+    "options": [
+      "象征",
+      "忠诚",
+      "船尾",
+      "对比"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "insult",
+    "id": 76,
+    "options": [
+      "侮辱",
+      "污染",
+      "肉体的",
+      "精确的"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "sanitary",
+    "id": 77,
+    "options": [
+      "呻吟",
+      "卫生的",
+      "迟到的",
+      "外星人"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "foster",
+    "id": 78,
+    "options": [
+      "刺入",
+      "促进",
+      "走私",
+      "仪式"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "dwindle",
+    "id": 79,
+    "options": [
+      "逐渐变少",
+      "医务室",
+      "臭名昭著的",
+      "插话"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "overflow",
+    "id": 80,
+    "options": [
+      "居住",
+      "连续的",
+      "溢出",
+      "锤子"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "frosty",
+    "id": 81,
+    "options": [
+      "冒险",
+      "椭圆形",
+      "霜冻",
+      "二进制"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "gallery",
+    "id": 82,
+    "options": [
+      "延长",
+      "态度；看法",
+      "画廊",
+      "群"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "beverage",
+    "id": 83,
+    "options": [
+      "期满",
+      "饮料",
+      "温和的",
+      "喜剧演员"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "cathedral",
+    "id": 84,
+    "options": [
+      "大教堂",
+      "屈服；结出果实",
+      "分子",
+      "刀片"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "blade",
+    "id": 85,
+    "options": [
+      "书法",
+      "阻塞",
+      "和弦",
+      "刀片"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "chili",
+    "id": 86,
+    "options": [
+      "红辣椒",
+      "横梁",
+      "构成",
+      "阻碍"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "reverse",
+    "id": 87,
+    "options": [
+      "强壮的",
+      "哑的",
+      "大教堂",
+      "反转"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "halve",
+    "id": 88,
+    "options": [
+      "治疗",
+      "减半",
+      "遗产",
+      "概述"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "chestnut",
+    "id": 89,
+    "options": [
+      "诱饵",
+      "喜爱",
+      "栗子",
+      "恶意"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "fatal",
+    "id": 90,
+    "options": [
+      "致命的",
+      "袖口",
+      "平均的",
+      "咆哮"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "avalanche",
+    "id": 91,
+    "options": [
+      "计划",
+      "雪崩",
+      "法典",
+      "使不同"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "skeleton",
+    "id": 92,
+    "options": [
+      "不断的",
+      "备份",
+      "骨架",
+      "刺耳的"
+    ]
+  },
+  {
+    "answer": 2,
+    "question": "glamor",
+    "id": 93,
+    "options": [
+      "日程表",
+      "贫瘠的",
+      "魅力",
+      "清教徒"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "coincide",
+    "id": 94,
+    "options": [
+      "私人司机",
+      "同时发生；一致",
+      "腹泻",
+      "流放"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "decree",
+    "id": 95,
+    "options": [
+      "法令",
+      "富裕的",
+      "谨慎",
+      "柱"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "dread",
+    "id": 96,
+    "options": [
+      "狡猾的",
+      "畏惧",
+      "分散",
+      "护卫"
+    ]
+  },
+  {
+    "answer": 3,
+    "question": "ventilate",
+    "id": 97,
+    "options": [
+      "偏见",
+      "轻微的",
+      "步行者",
+      "使通风"
+    ]
+  },
+  {
+    "answer": 1,
+    "question": "exert",
+    "id": 98,
+    "options": [
+      "恒定的",
+      "运用",
+      "忧虑",
+      "栗子"
+    ]
+  },
+  {
+    "answer": 0,
+    "question": "deplore",
+    "id": 99,
+    "options": [
+      "哀叹",
+      "扩张",
+      "折磨",
+      "唾液"
+    ]
+  }
+]

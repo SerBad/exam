@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.we.exam.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp">
+
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="63.5dp"
+            android:text="大嘴吧英语测试"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="34.5dp"
+            android:background="@drawable/login_input_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="姓名" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:background="#e7e7e7" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:hint="请输入您的名字"
+                android:inputType="textPersonName"
+                android:textColor="#676767"
+                android:textColorHint="#bfbfbf"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <RadioGroup
+            android:id="@+id/word_group"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp">
+            <RadioButton
+                android:id="@+id/high_school"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="高中单词"
+                android:gravity="center_vertical"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:id="@+id/tem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="专四单词"
+                android:gravity="center_vertical"
+                android:layout_weight="1"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/login"
+            style="@style/LoginCommonBtnStyle"
+            android:text="确定" />
+
+    </LinearLayout>
+</RelativeLayout>
