@@ -5,5 +5,5 @@
 
     <string name="error_invalid_email">您的名字不在该名单里面</string>
     <string name="error_field_required">请填写您名字</string>
-
+    <string name="result_score">恭喜您的最终成绩是： &lt;br/>&lt;br/>  &lt;font color="red">&lt;big>&lt;big>&lt;big>&lt;big>&lt;b>%1$s&lt;/b>&lt;/big>&lt;/big>&lt;/big>&lt;/big>&lt;/font> &lt;b> %% &lt;/b> </string>
 </resources>

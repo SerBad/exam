@@ -60,10 +60,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/top_view"
-        android:layout_marginTop="-20dp">
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="20dp">
 
     </android.support.v7.widget.RecyclerView>
 
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/paper"
+        android:scaleType="fitXY"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

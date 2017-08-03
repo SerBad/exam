@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -65,11 +66,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        time_view.setText(getCountDownTime(Calendar.getInstance().getTimeInMillis()));
+                        String s=getCountDownTime(Calendar.getInstance().getTimeInMillis());
+                        if(TextUtils.isEmpty(s)){
+                            Intent intent=new Intent(MainActivity.this,ResultActivity.class);
+                            startActivity(intent);
+                            finish();
+                        }else {
+                            time_view.setText(s);
+                            handler.postDelayed(this, 1000);
+                        }
                     }
                 });
 
-                handler.postDelayed(this, 1000);
+
             }
         }, 1000);
     }
@@ -106,16 +115,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
 
-    @Override
-    public void onBackPressed() {
-
-
-        if (helper != null && helper.isShowing()) {
-            helper.back();
-        } else {
-            super.onBackPressed();
-        }
-    }
+//    @Override
+//    public void onBackPressed() {
+//        if (helper != null && helper.isShowing()) {
+//            helper.back();
+//        } else {
+//            super.onBackPressed();
+//        }
+//    }
 
 
     private String getCountDownTime(long l) {
@@ -123,7 +130,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         long minute = (time - 1 - lasttime / 60);
         long second = (60 - lasttime % 60);
         String s = (minute < 10 ? "0" : "") + minute + ":" + (second < 10 ? "0" : "") + second + "";
-        return s;
+        if(minute<0){
+            return "";
+        }else {
+            return s;
+        }
+
     }
 }
 
