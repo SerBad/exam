@@ -24,8 +24,9 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         intent = new Intent();
         String time=SharedPreferencesUtil.getString(this, TIMEKEY, "");
+        Boolean complete=SharedPreferencesUtil.getBoolean(SplashActivity.this,COMPLETEKEY,false);
 
-        if (!TextUtils.isEmpty(SharedPreferencesUtil.getString(this, NAMEKEY, ""))) {
+        if (!TextUtils.isEmpty(SharedPreferencesUtil.getString(this, NAMEKEY, ""))&&!complete) {
             new Timer().schedule(new TimerTask() {
                 @Override
                 public void run() {
@@ -34,7 +35,7 @@ public class SplashActivity extends Activity {
                     finish();
                 }
             }, 2000);
-        } else if(SharedPreferencesUtil.getBoolean(SplashActivity.this,COMPLETEKEY,false)&&!TextUtils.isEmpty(time)&&((Calendar.getInstance().getTimeInMillis()-Long.valueOf(time))/1000)>MainActivity.time){
+        } else if(complete&&!TextUtils.isEmpty(time)&&((Calendar.getInstance().getTimeInMillis()-Long.valueOf(time))/1000)>MainActivity.time){
             Intent intent = new Intent(SplashActivity.this, ResultActivity.class);
             startActivity(intent);
             finish();

@@ -2,9 +2,13 @@ package com.we.exam;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -14,6 +18,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.we.exam.database.ExamWordsDao;
 import com.we.exam.util.SharedPreferencesUtil;
@@ -36,6 +41,7 @@ public class ResultActivity extends Activity {
     };
     private TextView name_view, result_view;
     private ExamWordsDao dao;
+    private Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,12 +68,27 @@ public class ResultActivity extends Activity {
     public void verifyStoragePermissions(Activity activity) {
         // Check if we have write permission
         int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if(ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)){
-            Log.i("xxx","shouldShowRequestPermissionRationale");
-        }
+
         if (permission != PackageManager.PERMISSION_GRANTED) {
-            // We don't have permission so prompt the user
-            ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, requestCode);
+            if(ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)){
+                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, requestCode);
+            }else {
+                showToast("滑到最下面打开权限管理打开存储空间的权限");
+                Intent localIntent = new Intent();
+                localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                if (Build.VERSION.SDK_INT >= 9) {
+                    localIntent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
+                    localIntent.setData(Uri.fromParts("package", getPackageName(), null));
+                } else if (Build.VERSION.SDK_INT <= 8) {
+                    localIntent.setAction(Intent.ACTION_VIEW);
+                    localIntent.setClassName("com.android.settings","com.android.settings.InstalledAppDetails");
+                    localIntent.putExtra("com.android.settings.ApplicationPkgName", getPackageName());
+                }
+                startActivity(localIntent);
+            }
+
+        }else {
+            screenShortcut();
         }
     }
 
@@ -117,5 +138,11 @@ public class ResultActivity extends Activity {
             verifyStoragePermissions(ResultActivity.this);
         }
     }
-
+    private void showToast(String s) {
+        if (toast != null) {
+            toast.cancel();
+        }
+        toast = Toast.makeText(this, s, Toast.LENGTH_LONG);
+        toast.show();
+    }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">测试</string>
+    <string name="app_name">英语考试</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_login">大嘴吧英语测试</string>
 
