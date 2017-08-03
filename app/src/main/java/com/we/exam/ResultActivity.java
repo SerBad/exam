@@ -114,7 +114,7 @@ public class ResultActivity extends Activity {
         FileOutputStream fos = null;
         try {
             Calendar calendar = Calendar.getInstance();
-            fos = new FileOutputStream(Environment.getExternalStorageDirectory().getPath() + File.separator + SharedPreferencesUtil.getString(this, NAMEKEY, "") + calendar.get(Calendar.MONTH) + "-" + calendar.get(Calendar.DATE) + ".png");
+            fos = new FileOutputStream(Environment.getExternalStorageDirectory().getPath() + File.separator + SharedPreferencesUtil.getString(this, NAMEKEY, "")+"-" + (calendar.get(Calendar.MONTH)+1) + "-" + calendar.get(Calendar.DATE) + ".png");
             if (null != fos) {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
                 fos.flush();
