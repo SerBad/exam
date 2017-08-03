@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
+import com.we.exam.database.ExamWordsDao;
 import com.we.exam.util.SharedPreferencesUtil;
 
 import java.io.File;
@@ -32,11 +33,13 @@ public class ResultActivity extends Activity {
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
     private TextView name_view, result_view;
+    private ExamWordsDao dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        dao=new ExamWordsDao(this);
         initView();
     }
 
@@ -44,7 +47,7 @@ public class ResultActivity extends Activity {
         name_view = (TextView) findViewById(R.id.name_view);
         result_view = (TextView) findViewById(R.id.result_view);
         name_view.setText(SharedPreferencesUtil.getString(this, NAMEKEY, ""));
-        result_view.setText(Html.fromHtml(getResources().getString(R.string.result_score, 77 + "")));
+        result_view.setText(Html.fromHtml(getResources().getString(R.string.result_score, dao.getCorrectPercent() + "")));
         result_view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
@@ -109,7 +112,6 @@ public class ResultActivity extends Activity {
         } else {
             verifyStoragePermissions(ResultActivity.this);
         }
-
     }
 
 }

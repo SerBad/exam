@@ -6,4 +6,5 @@
 
     <color name="mainColor">#48b6e7</color>
     <color name="exitBackground">#dadada</color>
+    <color name="quit_dialog_bg">#6c6c6c</color>
 </resources>

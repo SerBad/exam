@@ -66,6 +66,17 @@
     </android.support.v7.widget.RecyclerView>
 
 
+    <TextView
+        android:id="@+id/current_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"/>
+
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/paper"
         android:layout_width="wrap_content"

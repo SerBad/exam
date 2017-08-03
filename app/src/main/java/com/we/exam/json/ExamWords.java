@@ -12,6 +12,7 @@ public class ExamWords implements Serializable {
     private String question;
     private String id;
     private List<String> options;
+    private String check;
 
     public String getAnswer() {
         return answer;
@@ -43,5 +44,13 @@ public class ExamWords implements Serializable {
 
     public void setOptions(List<String> options) {
         this.options = options;
+    }
+
+    public String getCheck() {
+        return check;
+    }
+
+    public void setCheck(String check) {
+        this.check = check;
     }
 }

@@ -1,7 +1,6 @@
 package com.we.exam.json;
 
 import android.content.Context;
-import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -22,41 +21,42 @@ public class CatchData {
     private Context context;
     private WordsType wordsType;
 
+    public interface DataInfo {
+        void complete(List<ExamWords> list);
+
+    }
+
     public CatchData(Context context, WordsType wordsType) {
         this.context = context;
         this.wordsType = wordsType;
 
     }
 
-    public List<ExamWords> getExamData() {
+    public void getExamData(DataInfo dataInfo) {
         List<ExamWords> list = new ArrayList<>();
         Gson gson = new Gson();
-        list=gson.fromJson(getAssetsFile(), new TypeToken<ArrayList<ExamWords>>() {
+        list = gson.fromJson(getAssetsFile(), new TypeToken<ArrayList<ExamWords>>() {
         }.getType());
-        return list;
+        dataInfo.complete(list);
     }
 
 
     private String getAssetsFile() {
-        InputStream inputStream;
-        if (WordsType.HightSchool.getValue() == wordsType.getValue()) {
-            try {
-                inputStream = context.getAssets().open("high_school_quiz.json");
-                BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
-                StringBuffer buffer = new StringBuffer();
-                String line = "";
-                while ((line = in.readLine()) != null) {
-                    buffer.append(line);
-                }
-                return buffer.toString();
-
-            } catch (IOException e) {
-                e.printStackTrace();
+        InputStream inputStream = null;
+        try {
+            inputStream = context.getAssets().open(wordsType.getFileName());
+            BufferedReader in = new BufferedReader(new InputStreamReader(inputStream));
+            StringBuffer buffer = new StringBuffer();
+            String line = "";
+            while ((line = in.readLine()) != null) {
+                buffer.append(line);
             }
-        } else if (WordsType.TemFour.getValue() == wordsType.getValue()) {
+            return buffer.toString();
 
-
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
         return "";
     }
 

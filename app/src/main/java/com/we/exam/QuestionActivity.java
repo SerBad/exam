@@ -1,6 +1,7 @@
 package com.we.exam;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -10,12 +11,14 @@ import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 
+import com.we.exam.database.ExamWordsDao;
 import com.we.exam.helper.BaseViewHelper;
 import com.we.exam.json.CatchData;
 import com.we.exam.json.ExamWords;
 import com.we.exam.json.WordsType;
 import com.we.exam.recyclerview.QuestionRecyclerViewAdapter;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class QuestionActivity extends Activity implements View.OnClickListener {
@@ -24,24 +27,39 @@ public class QuestionActivity extends Activity implements View.OnClickListener {
     private RecyclerView question_recycler;
     private QuestionRecyclerViewAdapter adapter;
     private List<ExamWords> list;
+    private ExamWordsDao dao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         startTranslation();
         setContentView(R.layout.activity_question);
+        dao = new ExamWordsDao(this);
         inintView();
     }
 
     private void inintView() {
         close_image = (ImageView) findViewById(R.id.close_image);
         close_image.setOnClickListener(this);
-
         question_recycler = (RecyclerView) findViewById(R.id.question_recycler);
-        list = new CatchData(this, WordsType.HightSchool).getExamData();
+        list = dao.queryAll();
         adapter = new QuestionRecyclerViewAdapter(this, list);
         question_recycler.setLayoutManager(new GridLayoutManager(this, 5));
         question_recycler.setAdapter(adapter);
+        adapter.setQuestionInfo(new QuestionRecyclerViewAdapter.QuestionInfo() {
+            @Override
+            public void click(int page, int number) {
+                if (helper != null && helper.isShowing()) {
+                    Intent intent=new Intent();
+                    intent.putExtra("page",(Serializable) page);
+                    intent.putExtra("number",(Serializable)number);
+                    Log.i("xxx","page:"+page+"  number:"+number);
+                    QuestionActivity.this.setResult(120,intent);
+                    helper.backActivity(QuestionActivity.this);
+                }
+//                finish();
+            }
+        });
 
     }
 
@@ -89,7 +107,6 @@ public class QuestionActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onBackPressed() {
-
         if (helper != null && helper.isShowing()) {
             helper.backActivity(this);
         } else {
@@ -104,7 +121,7 @@ public class QuestionActivity extends Activity implements View.OnClickListener {
                 if (helper != null && helper.isShowing()) {
                     helper.backActivity(this);
                 }
-                finish();
+//                finish();
                 break;
         }
     }

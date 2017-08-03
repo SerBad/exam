@@ -21,13 +21,12 @@ public class ExamRecyclerViewAdapter extends RecyclerView.Adapter<ExamRecyclerVi
     private Context context;
     private List<ExamWords> list;
     private WordsRecyclerViewAdapter adapter;
-
+    private int position=0;
 
     public ExamRecyclerViewAdapter(Context context,List<ExamWords> list){
         this.context=context;
         this.list=list;
     }
-
 
     @Override
     public Item onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -40,11 +39,21 @@ public class ExamRecyclerViewAdapter extends RecyclerView.Adapter<ExamRecyclerVi
         adapter=new WordsRecyclerViewAdapter(context,list.subList(position*5,position*5+5));
         holder.recyclerView.setLayoutManager(new LinearLayoutManager(context));
         holder.recyclerView.setAdapter(adapter);
+
+        if(this.position>0){
+            holder.recyclerView.smoothScrollToPosition(this.position);
+        }
+
     }
 
     @Override
     public int getItemCount() {
-        return list!=null?list.size()/5:null;
+        return list!=null?list.size()/5:0;
+    }
+
+    public void smoothScrollToPosition(int position){
+        this.position=position;
+        adapter.notifyItemChanged(position);
     }
 
     public class Item extends RecyclerView.ViewHolder {

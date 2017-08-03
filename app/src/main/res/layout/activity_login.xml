@@ -88,6 +88,6 @@
             android:id="@+id/login"
             style="@style/LoginCommonBtnStyle"
             android:text="确定" />
-
     </LinearLayout>
+    <include layout="@layout/loading_data" />
 </RelativeLayout>

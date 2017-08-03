@@ -3,6 +3,7 @@ package com.we.exam.recyclerview;
 import android.content.Context;
 import android.support.annotation.IdRes;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.we.exam.R;
+import com.we.exam.database.ExamWordsDao;
 import com.we.exam.json.ExamWords;
 
 import java.util.List;
@@ -23,11 +25,13 @@ import java.util.List;
 public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecyclerViewAdapter.Item> {
     private Context context;
     private List<ExamWords> list;
+    private ExamWordsDao dao;
 
 
     public WordsRecyclerViewAdapter(Context context, List<ExamWords> list){
         this.context=context;
         this.list=list;
+        dao=new ExamWordsDao(context);
     }
 
 
@@ -38,8 +42,9 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
     }
 
     @Override
-    public void onBindViewHolder(final Item holder, int position) {
-        holder.questionView.setText(list.get(position).getQuestion());
+    public void onBindViewHolder(final Item holder, final int position) {
+
+        holder.questionView.setText("0"+(position+1)+"："+list.get(position).getQuestion());
         holder.answerViewA.setText(list.get(position).getOptions().get(0));
         holder.answerViewB.setText(list.get(position).getOptions().get(1));
         holder.answerViewC.setText(list.get(position).getOptions().get(2));
@@ -50,6 +55,11 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
                 if(holder.answerView2.getCheckedRadioButtonId()!=-1) {
                     holder.answerView2.clearCheck();
                 }
+                if(checkedId==holder.answerViewA.getId()){
+                    dao.updateCheck(list.get(position).getId(),0+"");
+                }else if(checkedId==holder.answerViewB.getId()){
+                    dao.updateCheck(list.get(position).getId(),1+"");
+                }
             }
         });
         holder.answerView2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -58,13 +68,38 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
                 if(holder.answerView1.getCheckedRadioButtonId()!=-1){
                     holder.answerView1.clearCheck();
                 }
+                if(checkedId==holder.answerViewC.getId()){
+                    dao.updateCheck(list.get(position).getId(),2+"");
+                }else if(checkedId==holder.answerViewD.getId()){
+                    dao.updateCheck(list.get(position).getId(),3+"");
+                }
             }
         });
+        List<ExamWords> wordsList=dao.getCheckById(list.get(position).getId());
+        if(wordsList!=null&&!wordsList.isEmpty()&&wordsList.size()!=0){
+            String check=wordsList.get(0).getCheck();
+            if (!TextUtils.isEmpty(check)) {
+                switch (Integer.valueOf(check)){
+                    case 0:
+                        holder.answerView1.check(holder.answerViewA.getId());
+                        break;
+                    case 1:
+                        holder.answerView1.check(holder.answerViewB.getId());
+                        break;
+                    case 2:
+                        holder.answerView2.check(holder.answerViewC.getId());
+                        break;
+                    case 3:
+                        holder.answerView2.check(holder.answerViewD.getId());
+                        break;
+                }
+            }
+        }
     }
 
     @Override
     public int getItemCount() {
-        return list!=null?list.size():null;
+        return list!=null?list.size():0;
     }
 
     public class Item extends RecyclerView.ViewHolder {
