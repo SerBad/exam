@@ -21,13 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <RadioGroup
-            android:id="@+id/answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
 
-            <RadioGroup
+            <LinearLayout
                 android:id="@+id/answer1"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -49,9 +44,9 @@
                     android:layout_weight="1"
                     android:text="B:"
                     android:lines="1"/>
-            </RadioGroup>
+            </LinearLayout>
 
-            <RadioGroup
+            <LinearLayout
                 android:id="@+id/answer2"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -73,10 +68,7 @@
                     android:layout_weight="1"
                     android:text="D:"
                     android:lines="1"/>
-            </RadioGroup>
-
-        </RadioGroup>
-
+            </LinearLayout>
     </LinearLayout>
 
 

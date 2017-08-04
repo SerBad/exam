@@ -25,7 +25,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
             android:lines="1"
-            android:text="您确定要提前交交卷吗？"
+            android:text="您确定要提前交卷吗？"
             android:textColor="#616161"
             android:layout_marginBottom="10dp"
             android:textSize="20sp" />

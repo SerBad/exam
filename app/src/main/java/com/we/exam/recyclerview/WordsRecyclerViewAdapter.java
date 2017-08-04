@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -43,62 +44,93 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
 
     @Override
     public void onBindViewHolder(final Item holder, final int position) {
-
         holder.questionView.setText("0"+(position+1)+"："+list.get(position).getQuestion());
         holder.answerViewA.setText(list.get(position).getOptions().get(0));
         holder.answerViewB.setText(list.get(position).getOptions().get(1));
         holder.answerViewC.setText(list.get(position).getOptions().get(2));
         holder.answerViewD.setText(list.get(position).getOptions().get(3));
-        holder.answerView1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                Log.i("xxx","answerView2:  "+holder.answerView2.getCheckedRadioButtonId()+"");
-                if(holder.answerView2.getCheckedRadioButtonId()>0) {
-                    holder.answerView2.clearCheck();
-                }
-                if(checkedId==holder.answerViewA.getId()){
-                   // holder.answerView2.clearCheck();
-                    dao.updateCheck(list.get(position).getId(),0+"");
-                }else if(checkedId==holder.answerViewB.getId()){
-                  //  holder.answerView2.clearCheck();
-                    dao.updateCheck(list.get(position).getId(),1+"");
-                }
-            }
-        });
-        holder.answerView2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                Log.i("xxx","answerView1:  "+holder.answerView1.getCheckedRadioButtonId()+"");
-                if(holder.answerView1.getCheckedRadioButtonId()>0){
-                    holder.answerView1.clearCheck();
-                }
-                if(checkedId==holder.answerViewC.getId()){
-                   // holder.answerView1.clearCheck();
-                    dao.updateCheck(list.get(position).getId(),2+"");
-                }else if(checkedId==holder.answerViewD.getId()){
-                  //  holder.answerView1.clearCheck();
-                    dao.updateCheck(list.get(position).getId(),3+"");
-                }
-            }
-        });
+
+//        holder.answerViewA.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                holder.check(0);
+//                dao.updateCheck(list.get(position).getId(),0+"");
+//            }
+//        });
+//        holder.answerViewB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                holder.check(1);
+//                dao.updateCheck(list.get(position).getId(),1+"");
+//            }
+//        });
+//        holder.answerViewC.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                holder.check(2);
+//                dao.updateCheck(list.get(position).getId(),2+"");
+//            }
+//        });
+//        holder.answerViewD.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                holder.check(3);
+//                dao.updateCheck(list.get(position).getId(),3+"");
+//            }
+//        });
+        holder.answerViewA.setOnClickListener(new MyOnClickListener(holder,position));
+        holder.answerViewB.setOnClickListener(new MyOnClickListener(holder,position));
+        holder.answerViewC.setOnClickListener(new MyOnClickListener(holder,position));
+        holder.answerViewD.setOnClickListener(new MyOnClickListener(holder,position));
         List<ExamWords> wordsList=dao.getCheckById(list.get(position).getId());
         if(wordsList!=null&&!wordsList.isEmpty()&&wordsList.size()!=0){
             String check=wordsList.get(0).getCheck();
             if (!TextUtils.isEmpty(check)) {
                 switch (Integer.valueOf(check)){
                     case 0:
-                        holder.answerView1.check(holder.answerViewA.getId());
+                        holder.check(holder.answerViewA.getId());
                         break;
                     case 1:
-                        holder.answerView1.check(holder.answerViewB.getId());
+                        holder.check(holder.answerViewB.getId());
                         break;
                     case 2:
-                        holder.answerView2.check(holder.answerViewC.getId());
+                        holder.check(holder.answerViewC.getId());
                         break;
                     case 3:
-                        holder.answerView2.check(holder.answerViewD.getId());
+                        holder.check(holder.answerViewD.getId());
                         break;
                 }
+            }
+        }
+    }
+
+    private class MyOnClickListener implements View.OnClickListener{
+        private Item item;
+        private int position=0;
+        public MyOnClickListener(Item item,int position){
+            this.item=item;
+            this.position=position;
+        }
+
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+                case R.id.answer_a:
+                    item.check(0);
+                    dao.updateCheck(list.get(position).getId(),0+"");
+                    break;
+                case R.id.answer_b:
+                    item.check(1);
+                    dao.updateCheck(list.get(position).getId(),1+"");
+                    break;
+                case R.id.answer_c:
+                    item.check(2);
+                    dao.updateCheck(list.get(position).getId(),2+"");
+                    break;
+                case R.id.answer_d:
+                    item.check(3);
+                    dao.updateCheck(list.get(position).getId(),3+"");
+                    break;
             }
         }
     }
@@ -110,9 +142,6 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
 
     public class Item extends RecyclerView.ViewHolder {
         public TextView questionView;
-        public RadioGroup answerView;
-        public RadioGroup answerView1;
-        public RadioGroup answerView2;
 
         public RadioButton answerViewA;
         public RadioButton answerViewB;
@@ -122,13 +151,41 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
         public Item(View itemView) {
             super(itemView);
             questionView=(TextView)itemView.findViewById(R.id.question);
-            answerView=(RadioGroup) itemView.findViewById(R.id.answer);
-            answerView1=(RadioGroup) itemView.findViewById(R.id.answer1);
-            answerView2=(RadioGroup) itemView.findViewById(R.id.answer2);
             answerViewA=(RadioButton) itemView.findViewById(R.id.answer_a);
             answerViewB=(RadioButton) itemView.findViewById(R.id.answer_b);
             answerViewC=(RadioButton) itemView.findViewById(R.id.answer_c);
             answerViewD=(RadioButton) itemView.findViewById(R.id.answer_d);
+        }
+
+
+        public void check(int i){
+            switch (i){
+                case 0:
+                    answerViewA.setChecked(true);
+                    answerViewB.setChecked(false);
+                    answerViewC.setChecked(false);
+                    answerViewD.setChecked(false);
+                    break;
+                case 1:
+                    answerViewA.setChecked(false);
+                    answerViewB.setChecked(true);
+                    answerViewC.setChecked(false);
+                    answerViewD.setChecked(false);
+                    break;
+                case 2:
+                    answerViewA.setChecked(false);
+                    answerViewB.setChecked(false);
+                    answerViewC.setChecked(true);
+                    answerViewD.setChecked(false);
+                    break;
+                case 3:
+                    answerViewA.setChecked(false);
+                    answerViewB.setChecked(false);
+                    answerViewC.setChecked(false);
+                    answerViewD.setChecked(true);
+                    break;
+            }
+
         }
     }
 
