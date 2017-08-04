@@ -106,8 +106,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    int lastVisibleItem = linearLayoutManager.findFirstVisibleItemPosition();
-                    if (lastVisibleItem > 0) {
+                    int lastVisibleItem = linearLayoutManager.findFirstCompletelyVisibleItemPosition();
+                    if (lastVisibleItem >= 0) {
                         current_page.setText(lastVisibleItem + 1 + "/" + adapter.getItemCount());
                     }
                 }
