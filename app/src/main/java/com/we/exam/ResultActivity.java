@@ -2,7 +2,6 @@ package com.we.exam;
 
 import android.Manifest;
 import android.app.Activity;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -14,7 +13,6 @@ import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.text.Html;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.TextView;
@@ -47,7 +45,7 @@ public class ResultActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
-        dao=new ExamWordsDao(this);
+        dao = new ExamWordsDao(this);
         initView();
     }
 
@@ -70,24 +68,25 @@ public class ResultActivity extends Activity {
         int permission = ActivityCompat.checkSelfPermission(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE);
 
         if (permission != PackageManager.PERMISSION_GRANTED) {
-            if(ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)){
+            if (ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
                 ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, requestCode);
-            }else {
-                showToast("滑到最下面打开权限管理打开存储空间的权限");
-                Intent localIntent = new Intent();
-                localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                if (Build.VERSION.SDK_INT >= 9) {
-                    localIntent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
-                    localIntent.setData(Uri.fromParts("package", getPackageName(), null));
-                } else if (Build.VERSION.SDK_INT <= 8) {
-                    localIntent.setAction(Intent.ACTION_VIEW);
-                    localIntent.setClassName("com.android.settings","com.android.settings.InstalledAppDetails");
-                    localIntent.putExtra("com.android.settings.ApplicationPkgName", getPackageName());
-                }
-                startActivity(localIntent);
+            } else {
+                ActivityCompat.requestPermissions(activity, PERMISSIONS_STORAGE, requestCode);
+//                showToast("滑到最下面打开权限管理打开存储空间的权限");
+//                Intent localIntent = new Intent();
+//                localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                if (Build.VERSION.SDK_INT >= 9) {
+//                    localIntent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
+//                    localIntent.setData(Uri.fromParts("package", getPackageName(), null));
+//                } else if (Build.VERSION.SDK_INT <= 8) {
+//                    localIntent.setAction(Intent.ACTION_VIEW);
+//                    localIntent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails");
+//                    localIntent.putExtra("com.android.settings.ApplicationPkgName", getPackageName());
+//                }
+//                startActivity(localIntent);
             }
 
-        }else {
+        } else {
             screenShortcut();
         }
     }
@@ -114,7 +113,7 @@ public class ResultActivity extends Activity {
         FileOutputStream fos = null;
         try {
             Calendar calendar = Calendar.getInstance();
-            fos = new FileOutputStream(Environment.getExternalStorageDirectory().getPath() + File.separator + SharedPreferencesUtil.getString(this, NAMEKEY, "")+"-" + (calendar.get(Calendar.MONTH)+1) + "-" + calendar.get(Calendar.DATE) + ".png");
+            fos = new FileOutputStream(Environment.getExternalStorageDirectory().getPath() + File.separator + SharedPreferencesUtil.getString(this, NAMEKEY, "") + "-" + (calendar.get(Calendar.MONTH) + 1) + "-" + calendar.get(Calendar.DATE) + ".png");
             if (null != fos) {
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
                 fos.flush();
@@ -138,6 +137,7 @@ public class ResultActivity extends Activity {
             verifyStoragePermissions(ResultActivity.this);
         }
     }
+
     private void showToast(String s) {
         if (toast != null) {
             toast.cancel();

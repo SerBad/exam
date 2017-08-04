@@ -9,6 +9,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
@@ -29,7 +31,7 @@ import static com.we.exam.LoginActivity.TIMEKEY;
 import static com.we.exam.SplashActivity.NAMEKEY;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    public static final String COMPLETEKEY="complete";
+    public static final String COMPLETEKEY = "complete";
     public static final int time = 60;
     private RecyclerView recycler_exam;
     private ExamRecyclerViewAdapter adapter;
@@ -104,7 +106,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 if (newState == RecyclerView.SCROLL_STATE_IDLE) {
-                    int lastVisibleItem = linearLayoutManager.findLastCompletelyVisibleItemPosition();
+                    int lastVisibleItem = linearLayoutManager.findFirstVisibleItemPosition();
                     if (lastVisibleItem > 0) {
                         current_page.setText(lastVisibleItem + 1 + "/" + adapter.getItemCount());
                     }
@@ -172,8 +174,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     //交卷
-    private void uploadExam(){
-        SharedPreferencesUtil.setBoolean(MainActivity.this,COMPLETEKEY,true);
+    private void uploadExam() {
+        SharedPreferencesUtil.setBoolean(MainActivity.this, COMPLETEKEY, true);
         handler.removeCallbacksAndMessages(null);
         Intent intent = new Intent(MainActivity.this, ResultActivity.class);
         startActivity(intent);

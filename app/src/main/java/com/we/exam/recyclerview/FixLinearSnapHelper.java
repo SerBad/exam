@@ -2,6 +2,7 @@ package com.we.exam.recyclerview;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
@@ -42,6 +43,19 @@ public class FixLinearSnapHelper extends LinearSnapHelper {
     public void attachToRecyclerView(@Nullable RecyclerView recyclerView) throws IllegalStateException {
         this.mRecyclerView = recyclerView;
         super.attachToRecyclerView(recyclerView);
+    }
+    @Override
+    public int findTargetSnapPosition(RecyclerView.LayoutManager layoutManager, int velocityX, int velocityY) {
+        int targetPos = super.findTargetSnapPosition(layoutManager, velocityX, velocityY);
+        final View currentView = findSnapView(layoutManager);
+        if(targetPos != RecyclerView.NO_POSITION && currentView != null){
+            int currentPostion = layoutManager.getPosition(currentView);
+            int first = ((LinearLayoutManager)layoutManager).findFirstVisibleItemPosition();
+            int last = ((LinearLayoutManager)layoutManager).findLastVisibleItemPosition();
+            currentPostion = targetPos < currentPostion ? last : (targetPos > currentPostion ? first : currentPostion);
+            targetPos = targetPos < currentPostion ? currentPostion - 1 : (targetPos > currentPostion ? currentPostion + 1 : currentPostion);
+        }
+        return targetPos;
     }
 
     private int distanceToCenter(View targetView, OrientationHelper helper) {
