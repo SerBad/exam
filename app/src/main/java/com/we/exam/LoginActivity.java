@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -55,6 +57,12 @@ public class LoginActivity extends Activity {
         word_group = (RadioGroup) findViewById(R.id.word_group);
         nameView = (EditText) findViewById(R.id.name);
         loginView = (TextView) findViewById(R.id.login);
+        ll_loading.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
         loginView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +72,6 @@ public class LoginActivity extends Activity {
                         ll_loading.setVisibility(View.VISIBLE);
                     }
                 });
-
                 login();
 
             }
@@ -114,6 +121,15 @@ public class LoginActivity extends Activity {
                 new CatchData(LoginActivity.this, wordsType).getExamData(new CatchData.DataInfo() {
                     @Override
                     public void complete(List<ExamWords> listAll) {
+//                        for(ExamWords examWords:listAll){
+//                            for(int i=0;i<examWords.getOptions().size()-2;i++){
+//                                for(int f=i+1;f<examWords.getOptions().size()-1;f++){
+//                                    if(TextUtils.equals(examWords.getOptions().get(i),examWords.getOptions().get(f))){
+//                                        Log.i("xxx","question: "+examWords.getQuestion()+"");
+//                                    }
+//                                }
+//                            }
+//                        }
                         TreeSet<Integer> partRandom = getRandom();
                         list = new ArrayList<>();
                         for (Integer i : partRandom) {

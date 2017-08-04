@@ -50,34 +50,6 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
         holder.answerViewC.setText(list.get(position).getOptions().get(2));
         holder.answerViewD.setText(list.get(position).getOptions().get(3));
 
-//        holder.answerViewA.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                holder.check(0);
-//                dao.updateCheck(list.get(position).getId(),0+"");
-//            }
-//        });
-//        holder.answerViewB.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                holder.check(1);
-//                dao.updateCheck(list.get(position).getId(),1+"");
-//            }
-//        });
-//        holder.answerViewC.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                holder.check(2);
-//                dao.updateCheck(list.get(position).getId(),2+"");
-//            }
-//        });
-//        holder.answerViewD.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                holder.check(3);
-//                dao.updateCheck(list.get(position).getId(),3+"");
-//            }
-//        });
         holder.answerViewA.setOnClickListener(new MyOnClickListener(holder,position));
         holder.answerViewB.setOnClickListener(new MyOnClickListener(holder,position));
         holder.answerViewC.setOnClickListener(new MyOnClickListener(holder,position));
@@ -86,20 +58,7 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
         if(wordsList!=null&&!wordsList.isEmpty()&&wordsList.size()!=0){
             String check=wordsList.get(0).getCheck();
             if (!TextUtils.isEmpty(check)) {
-                switch (Integer.valueOf(check)){
-                    case 0:
-                        holder.check(holder.answerViewA.getId());
-                        break;
-                    case 1:
-                        holder.check(holder.answerViewB.getId());
-                        break;
-                    case 2:
-                        holder.check(holder.answerViewC.getId());
-                        break;
-                    case 3:
-                        holder.check(holder.answerViewD.getId());
-                        break;
-                }
+                holder.check(Integer.valueOf(check));
             }
         }
     }
@@ -159,33 +118,37 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
 
 
         public void check(int i){
-            switch (i){
-                case 0:
-                    answerViewA.setChecked(true);
-                    answerViewB.setChecked(false);
-                    answerViewC.setChecked(false);
-                    answerViewD.setChecked(false);
-                    break;
-                case 1:
-                    answerViewA.setChecked(false);
-                    answerViewB.setChecked(true);
-                    answerViewC.setChecked(false);
-                    answerViewD.setChecked(false);
-                    break;
-                case 2:
-                    answerViewA.setChecked(false);
-                    answerViewB.setChecked(false);
-                    answerViewC.setChecked(true);
-                    answerViewD.setChecked(false);
-                    break;
-                case 3:
-                    answerViewA.setChecked(false);
-                    answerViewB.setChecked(false);
-                    answerViewC.setChecked(false);
-                    answerViewD.setChecked(true);
-                    break;
-            }
-
+            answerViewA.setChecked(i==0);
+            answerViewB.setChecked(i==1);
+            answerViewC.setChecked(i==2);
+            answerViewD.setChecked(i==3);
+//            switch (i){
+//                case 0:
+//                    answerViewA.setChecked(i==0?true:false);
+//                    answerViewB.setChecked(i==1?true:false);
+//                    answerViewC.setChecked(i==2?true:false);
+//                    answerViewD.setChecked(i==3?true:false);
+//                    break;
+//                case 1:
+//                    answerViewA.setChecked(false);
+//                    answerViewB.setChecked(true);
+//                    answerViewC.setChecked(false);
+//                    answerViewD.setChecked(false);
+//                    break;
+//                case 2:
+//                    answerViewA.setChecked(false);
+//                    answerViewB.setChecked(false);
+//                    answerViewC.setChecked(true);
+//                    answerViewD.setChecked(false);
+//                    break;
+//                case 3:
+//                    answerViewA.setChecked(false);
+//                    answerViewB.setChecked(false);
+//                    answerViewC.setChecked(false);
+//                    answerViewD.setChecked(true);
+//                    break;
+//            }
+//
         }
     }
 
