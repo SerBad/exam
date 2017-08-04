@@ -1,6 +1,7 @@
 package com.we.exam;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
@@ -46,13 +48,14 @@ public class LoginActivity extends Activity {
     private List<ExamWords> list;
     private ExamWordsDao dao;
     private LinearLayout ll_loading;
+    private InputMethodManager imm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         dao = new ExamWordsDao(this);
-
+        imm= (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
         ll_loading = (LinearLayout) findViewById(R.id.ll_loading);
         word_group = (RadioGroup) findViewById(R.id.word_group);
         nameView = (EditText) findViewById(R.id.name);
@@ -109,6 +112,12 @@ public class LoginActivity extends Activity {
     }
 
     private void startExam(final WordsType wordsType) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                imm.hideSoftInputFromWindow(nameView.getWindowToken(), 0);
+            }
+        });
         new Thread(new Runnable() {
             @Override
             public void run() {
