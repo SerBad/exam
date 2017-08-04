@@ -52,12 +52,15 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
         holder.answerView1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                if(holder.answerView2.getCheckedRadioButtonId()!=-1) {
+                Log.i("xxx","answerView2:  "+holder.answerView2.getCheckedRadioButtonId()+"");
+                if(holder.answerView2.getCheckedRadioButtonId()>0) {
                     holder.answerView2.clearCheck();
                 }
                 if(checkedId==holder.answerViewA.getId()){
+                   // holder.answerView2.clearCheck();
                     dao.updateCheck(list.get(position).getId(),0+"");
                 }else if(checkedId==holder.answerViewB.getId()){
+                  //  holder.answerView2.clearCheck();
                     dao.updateCheck(list.get(position).getId(),1+"");
                 }
             }
@@ -65,12 +68,15 @@ public class WordsRecyclerViewAdapter extends RecyclerView.Adapter<WordsRecycler
         holder.answerView2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
-                if(holder.answerView1.getCheckedRadioButtonId()!=-1){
+                Log.i("xxx","answerView1:  "+holder.answerView1.getCheckedRadioButtonId()+"");
+                if(holder.answerView1.getCheckedRadioButtonId()>0){
                     holder.answerView1.clearCheck();
                 }
                 if(checkedId==holder.answerViewC.getId()){
+                   // holder.answerView1.clearCheck();
                     dao.updateCheck(list.get(position).getId(),2+"");
                 }else if(checkedId==holder.answerViewD.getId()){
+                  //  holder.answerView1.clearCheck();
                     dao.updateCheck(list.get(position).getId(),3+"");
                 }
             }

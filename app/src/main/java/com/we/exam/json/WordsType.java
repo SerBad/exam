@@ -5,7 +5,7 @@ package com.we.exam.json;
  */
 
 public enum WordsType {
-     HightSchool(1,48,"high_school_quiz.json"),TemFour(2,40,"tem4_quiz.json");
+     HightSchool(1,40,"high_school_quiz.json"),TemFour(2,30,"tem4_quiz.json");
     private int value;
     private int parts;
     private String fileName;

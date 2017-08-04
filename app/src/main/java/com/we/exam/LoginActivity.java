@@ -35,7 +35,7 @@ public class LoginActivity extends Activity {
     public static final String TIMEKEY = "timer";
     public static final String LISTKET = "list";
     public static final String WORDSTYPEKEY = "words_type";
-    public static final int examParts = 7;
+    public static final int examParts = 6;
 
     private EditText nameView;
     private TextView loginView;

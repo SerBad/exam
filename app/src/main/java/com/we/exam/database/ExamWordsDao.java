@@ -99,7 +99,7 @@ public class ExamWordsDao {
 
     public int getCorrectPercent(){
         List<ExamWords> wordses=this.queryAll();
-        int correcetNumber=0;
+        float correcetNumber=0f;
         for (ExamWords words:wordses){
             if(!TextUtils.isEmpty(words.getCheck())){
                 if(TextUtils.equals(words.getAnswer(),words.getCheck())){
@@ -108,6 +108,6 @@ public class ExamWordsDao {
                 }
             }
         }
-        return  (int)(correcetNumber/wordses.size());
+        return  (int)(correcetNumber/wordses.size()*100);
     }
 }
