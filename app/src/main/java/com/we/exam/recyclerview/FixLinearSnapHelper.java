@@ -49,11 +49,11 @@ public class FixLinearSnapHelper extends LinearSnapHelper {
         int targetPos = super.findTargetSnapPosition(layoutManager, velocityX, velocityY);
         final View currentView = findSnapView(layoutManager);
         if(targetPos != RecyclerView.NO_POSITION && currentView != null){
-            int currentPostion = layoutManager.getPosition(currentView);
+            int currentPosition = layoutManager.getPosition(currentView);
             int first = ((LinearLayoutManager)layoutManager).findFirstVisibleItemPosition();
             int last = ((LinearLayoutManager)layoutManager).findLastVisibleItemPosition();
-            currentPostion = targetPos < currentPostion ? last : (targetPos > currentPostion ? first : currentPostion);
-            targetPos = targetPos < currentPostion ? currentPostion - 1 : (targetPos > currentPostion ? currentPostion + 1 : currentPostion);
+            currentPosition = targetPos < currentPosition ? last : (targetPos > currentPosition ? first : currentPosition);
+            targetPos = targetPos < currentPosition ? currentPosition - 1 : (targetPos > currentPosition ? currentPosition + 1 : currentPosition);
         }
         return targetPos;
     }
